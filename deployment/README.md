@@ -33,7 +33,7 @@ no Hardhat/Truffle scripts needed. Steps below.
 ## 3. Deploy
 
 1. Open the "Deploy & Run Transactions" tab.
-2. Set **Environment** to `Injected Provider - MetaMask`.
+2. Set **Environment** to `Browser Extension - MetaMask`.
 3. Confirm MetaMask is connected and switched to **Sepolia** (chain id
    11155111).
 4. Under **Contract**, select `FortyTwoNFT`.
