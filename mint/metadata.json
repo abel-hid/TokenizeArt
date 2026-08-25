@@ -1,0 +1,10 @@
+{
+  "name": "42 Genesis",
+  "description": "First NFT minted for the 1337/42 TokenizeArt project. Includes the number 42 as required by the subject.",
+  "image": "ipfs://bafkreidulzobfnmrztovijb2rf7fbftim5y57xks2snvdv5glacxihukuq",
+  "attributes": [
+    { "trait_type": "Artist", "value": "abel-hid" },
+    { "trait_type": "Project", "value": "TokenizeArt" },
+    { "trait_type": "School", "value": "1337 / 42 Network" }
+  ]
+}
