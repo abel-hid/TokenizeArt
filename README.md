@@ -87,3 +87,8 @@ documentation/   -> whitepaper.md, explains architecture & security choices
 3. Follow `mint/README.md` to mint your NFT and confirm ownership via
    `ownerOf`.
 4. See `documentation/whitepaper.md` for the full write-up.
+
+
+
+
+https://sepolia.etherscan.io/token/0xd8651840B9ed70C6A0287c1C283f8e9Cded659b6

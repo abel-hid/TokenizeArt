@@ -9,15 +9,11 @@ no Hardhat/Truffle scripts needed. Steps below.
   ships built into MetaMask by default — just turn on "Show test networks"
   in Settings > General, or add it manually:
   - Network name: `Sepolia`
-  - RPC URL: `https://rpc.sepolia.org` (or any Sepolia RPC — Infura/Alchemy
-    also work if you have a free API key)
+  - RPC URL: `https://rpc.sepolia.org`
   - Chain ID: `11155111`
   - Currency symbol: `SepoliaETH`
   - Block explorer: `https://sepolia.etherscan.io`
-- Free `SepoliaETH` from a faucet — e.g.
-  [sepoliafaucet.com](https://sepoliafaucet.com) or
-  [Google's Sepolia faucet](https://cloud.google.com/application/web3/faucet/ethereum/sepolia).
-  This is test currency only — never use real funds for this project.
+- Free `SepoliaETH` from a faucet [Google's Sepolia faucet](https://cloud.google.com/application/web3/faucet/ethereum/sepolia).
 
 ## 1. Load the contract in Remix
 

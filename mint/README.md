@@ -2,14 +2,10 @@
 
 ## 1. Create your image
 
-- Make an image that clearly includes the number **42** (legible, not
-  distorted — see subject warning about badly-displayed "42"s).
-- No offensive content.
-
+- Make an image that clearly includes the number **42** 
 ## 2. Upload image + metadata to IPFS
 
-Easiest route: [Pinata](https://app.pinata.cloud) (free tier is enough).
-
+Easiest route: [Pinata](https://app.pinata.cloud)
 1. Upload your image file. Pinata gives you a CID, e.g. `bafybe...xyz`.
 2. Edit `mint/metadata.json`:
    - Set `"image"` to `ipfs://<image_CID>/<filename>`.
