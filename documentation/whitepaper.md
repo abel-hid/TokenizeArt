@@ -13,7 +13,7 @@ who can do it:
 
 | Action | Who can do it | How |
 |---|---|---|
-| Mint a new NFT | Contract owner only | Call `safeMint(to, uri)` — see `mint/README.md` |
+| Mint a new NFT | Contract owner only | Call `safeMint(to, uri)` => see `mint/README.md` |
 | Check who owns a token | Anyone (read-only, free) | Call `ownerOf(tokenId)` |
 | Check how many tokens an address holds | Anyone (read-only, free) | Call `balanceOf(address)` |
 | Read a token's metadata link | Anyone (read-only, free) | Call `tokenURI(tokenId)` |
@@ -22,7 +22,7 @@ who can do it:
 | Approve someone else to transfer a specific token | The token's current owner | Call `approve(operator, tokenId)` |
 | Approve someone else to transfer *all* your tokens | Any token holder | Call `setApprovalForAll(operator, true)` |
 
-Minting is intentionally the only privileged action — everything else
+Minting is intentionally the only privileged action everything else
 (checking ownership, reading metadata, transferring) works exactly like
 any standard ERC-721 token, with no special permissions beyond normal
 token ownership. See `mint/README.md` for the concrete step-by-step of
@@ -30,13 +30,13 @@ minting a token via Remix.
 
 ## Standard used
 
-ERC-721 — the standard non-fungible token interface. This was
+ERC-721 - the standard non-fungible token interface. This was
 chosen over ERC-1155 (multi-token) because each token here represents a
 distinct, one-of-a-kind piece of art, which is exactly what ERC-721 models.
 
 ## Architecture
 
-- **`ERC721`** (OpenZeppelin): base standard implementation — transfer,
+- **`ERC721`** (OpenZeppelin): base standard implementation - transfer,
   approval, `ownerOf`, `balanceOf`, etc.
 - **`ERC721URIStorage`** (OpenZeppelin): lets each token id have its own
   metadata URI, rather than one shared URI pattern for the whole collection.
@@ -45,12 +45,12 @@ distinct, one-of-a-kind piece of art, which is exactly what ERC-721 models.
 
 ## Why minting is owner-restricted
 
-The subject asks that all aspects of security — ownership and privileges —
+The subject asks that all aspects of security - ownership and privileges
 be thought through. Leaving `safeMint` public would let anyone mint tokens
 under the `FortyTwoArt` / `F42` collection name, diluting and spamming it.
 Restricting it to `onlyOwner` means only the deployer controls what gets
 added to the collection. Note this is separate from *token* ownership: once
-minted, an NFT is fully owned and transferable by whoever holds it — the
+minted, an NFT is fully owned and transferable by whoever holds it - the
 contract owner has no special power over already-minted tokens (no admin
 burn, no forced transfer, no royalty siphon).
 
@@ -68,13 +68,13 @@ burn, no forced transfer, no royalty siphon).
 
 1. Deploy the contract (see `deployment/README.md`).
 2. Mint a token (see `mint/README.md`).
-3. Call `ownerOf(tokenId)` — returns the current owner's address, proving
+3. Call `ownerOf(tokenId)` - returns the current owner's address, proving
    on-chain ownership.
-4. Call `tokenURI(tokenId)` — returns the IPFS metadata link; fetching it
+4. Call `tokenURI(tokenId)` - returns the IPFS metadata link; fetching it
    returns the JSON with the image link.
 5. View the contract and its balance/transfers on Sepolia Etherscan.
 
 ## Network
 
-Deployed and tested on **Ethereum Sepolia** (chain id 11155111) — no real
+Deployed and tested on **Ethereum Sepolia** (chain id 11155111) - no real
 funds involved, `SepoliaETH` obtained free from a public Sepolia faucet.

@@ -1,12 +1,10 @@
 # Deployment (via Remix + Ethereum Sepolia)
 
-This project is deployed straight from [Remix IDE](https://remix.ethereum.org) —
-no Hardhat/Truffle scripts needed. Steps below.
-
+This project is deployed straight from [Remix IDE](https://remix.ethereum.org)
 ## 0. Prerequisites
 
 - MetaMask installed, with the **Sepolia** test network enabled. Sepolia
-  ships built into MetaMask by default — just turn on "Show test networks"
+  ships built into MetaMask by default just turn on "Show test networks"
   in Settings > General, or add it manually:
   - Network name: `Sepolia`
   - RPC URL: `https://rpc.sepolia.org`
@@ -21,8 +19,7 @@ no Hardhat/Truffle scripts needed. Steps below.
 2. In the File Explorer, create `contracts/FortyTwoNFT.sol`.
 3. Paste in the contents of `code/FortyTwoNFT.sol`.
 4. Remix will automatically resolve the `@openzeppelin/contracts@5.0.2/...`
-   imports over the network the first time you compile — no local install
-   required.
+   imports over the network the first time you compile.
 
 ## 2. Compile
 
@@ -40,14 +37,11 @@ no Hardhat/Truffle scripts needed. Steps below.
 5. In the constructor field (`initialOwner`), paste your own wallet address.
 6. Click **Deploy**, then confirm the transaction in MetaMask.
 7. Once mined, copy the deployed contract address from Remix (shown under
-   "Deployed Contracts") — you'll need it for minting and for the repo README.
+   "Deployed Contracts") - you'll need it for minting and for the repo README.
 
 ## 4. Verify on Etherscan (optional but recommended)
 
 1. Go to `https://sepolia.etherscan.io/address/<your_contract_address>`.
-2. Use "Verify and Publish" (or Remix's built-in Etherscan plugin — paste an
-   Etherscan API key, generated free from your Etherscan account) to publish
-   the source, so anyone can read the contract on-chain.
 
 ## Record here after deploying
 

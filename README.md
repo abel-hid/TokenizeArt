@@ -1,26 +1,26 @@
-# TokenizeArt — FortyTwoNFT
+# TokenizeArt - FortyTwoNFT
 
-An ERC-721 NFT project built for the 1337/42 TokenizeArt subject.
+An ERC-721 NFT project built for the 1337/42 TokenizeArt project.
 
 ## Platform choice
 
 Several blockchain platforms could support this project, each with real
 trade-offs:
 
-- **Ethereum (and its testnets, e.g. Sepolia)** — the original and most
+- **Ethereum (and its testnets, e.g. Sepolia)** - the original and most
   widely supported smart-contract platform. ERC-721 was defined here.
   Every wallet, explorer (Etherscan), and IPFS/metadata tool assumes
   Ethereum-compatible chains first. Downside: mainnet gas fees are the
   highest of any EVM chain (not a concern on testnet, since it's free).
-- **BNB Chain (BSC)** — an EVM-compatible chain, so the same Solidity code
+- **BNB Chain (BSC)** - an EVM-compatible chain, so the same Solidity code
   runs unmodified (BEP-721 is literally the same interface as ERC-721
   under a different name). Cheaper gas on mainnet, but a smaller,
   more centralized validator set and less first-class tooling support than
   Ethereum.
-- **Polygon** — another EVM chain, very cheap gas, but adds a second
+- **Polygon** - another EVM chain, very cheap gas, but adds a second
   network/bridge to reason about for no real benefit at student-project
   scale.
-- **Solana / Flow** — non-EVM chains with their own NFT standards
+- **Solana / Flow** - non-EVM chains with their own NFT standards
   (Metaplex on Solana, Flow NFT standard). These use different languages
   entirely (Rust, Cadence) and different tooling (no Remix support),
   which would mean learning a whole new ecosystem rather than the
@@ -38,26 +38,27 @@ they're all EVM-compatible.
 
 **Solidity** was chosen over the alternatives:
 
-- **Solidity** (chosen) — the standard language for EVM smart contracts.
+- **Solidity** (chosen) - the standard language for EVM smart contracts.
   Directly supported by Remix, has the OpenZeppelin library (audited,
   widely used ERC-721 reference implementation) available as a one-line
   import, and is what almost all ERC-721/BEP-721 tutorials and tooling
   assume.
-- **Vyper** — a more security-focused, Python-like alternative for the
+- **Vyper** - a more security-focused, Python-like alternative for the
   EVM. Rejected because it has a much smaller ecosystem, no equivalent to
   OpenZeppelin's battle-tested ERC-721 implementation, and far less
   Remix/tooling support.
-- **Rust / Cadence** — required for non-EVM chains (Solana, Flow
+- **Rust / Cadence** - required for non-EVM chains (Solana, Flow
   respectively). Rejected along with those chains for the reasons above.
+- **EVM** - The Ethereum Virtual Machine (EVM) is a decentralized computation engine that executes smart contracts and updates the state of the Ethereum network. It serves as the runtime environment for decentralized applications (dApps), ensuring that all nodes in the network agree on the outcome of every transaction.
 
 ## Other choices made
 
 - **Standard**: ERC-721, via OpenZeppelin's audited base contracts, rather
-  than writing the interface from scratch — this keeps the token-transfer/
+  than writing the interface from scratch - this keeps the token-transfer/
   approval logic battle-tested and lets the code review focus on the
   project-specific logic (minting, metadata, ownership rules).
 - **Tooling**: Remix IDE, using Injected Provider (MetaMask) to deploy
-  directly to Ethereum Sepolia — no local Hardhat/Truffle setup needed.
+  directly to Ethereum Sepolia - no local Hardhat/Truffle setup needed.
 - **Metadata/image storage**: IPFS (via Pinata), satisfying the requirement
   that the image be stored using distributed registry technology.
 - **Minting restricted to the contract owner** (`onlyOwner` on `safeMint`),
@@ -76,7 +77,7 @@ documentation/   -> whitepaper.md, explains architecture & security choices
 
 ## Deployed contract
 
-- **Address:** _fill in after deploying — see `deployment/README.md`_
+- **Address:** _fill in after deploying - see `deployment/README.md`_
 - **Network:** Ethereum Sepolia
 - **Explorer:** `https://sepolia.etherscan.io/address/<address>`
 
@@ -88,7 +89,3 @@ documentation/   -> whitepaper.md, explains architecture & security choices
    `ownerOf`.
 4. See `documentation/whitepaper.md` for the full write-up.
 
-
-
-
-https://sepolia.etherscan.io/token/0xd8651840B9ed70C6A0287c1C283f8e9Cded659b6
