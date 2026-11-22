@@ -2,8 +2,8 @@
 
 ## What this is
 
-A single ERC-721 smart contract, `FortyTwoNFT`, that
-lets its owner mint unique NFTs. Each NFT has its own metadata (name,
+A single ERC-721 smart contract, `FortyTwoNFT` (collection name
+`FortyTwoArt`, symbol `F42`), that lets its owner mint unique NFTs. Each NFT has its own metadata (name,
 description, image, attributes) hosted on IPFS, referenced via `tokenURI`.
 
 ## Actions possible with this NFT
@@ -22,7 +22,7 @@ who can do it:
 | Approve someone else to transfer a specific token | The token's current owner | Call `approve(operator, tokenId)` |
 | Approve someone else to transfer *all* your tokens | Any token holder | Call `setApprovalForAll(operator, true)` |
 
-Minting is intentionally the only privileged action everything else
+Minting is intentionally the only privileged action. Everything else
 (checking ownership, reading metadata, transferring) works exactly like
 any standard ERC-721 token, with no special permissions beyond normal
 token ownership. See `mint/README.md` for the concrete step-by-step of

@@ -2,16 +2,19 @@
 
 ## 1. Create your image
 
-- Make an image that clearly includes the number **42** 
+- Make an image that clearly includes the number **42**.
+
 ## 2. Upload image + metadata to IPFS
 
-Easiest route: [Pinata](https://app.pinata.cloud)
+Easiest route: [Pinata](https://app.pinata.cloud).
+
 1. Upload your image file. Pinata gives you a CID, e.g. `bafybe...xyz`.
 2. Edit `mint/metadata.json`:
-   - Set `"image"` to `ipfs://<image_CID>/<filename>`.
+   - Set `"image"` to `ipfs://<image_CID>` (or `ipfs://<folder_CID>/<filename>`
+     if you uploaded a folder).
    - Set the `Artist` attribute to **abel-hid** and give it a real title in `"name"`.
-3. Upload `metadata.json` itself to Pinata too. This gives you a second CID
-   - this is your **token URI**, e.g. `ipfs://<metadata_CID>`.
+3. Upload `metadata.json` itself to Pinata too. This gives you a second CID;
+   this is your **token URI**, e.g. `ipfs://<metadata_CID>`.
 
 ## 3. Mint through Remix
 

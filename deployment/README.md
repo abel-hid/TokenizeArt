@@ -1,17 +1,19 @@
 # Deployment (via Remix + Ethereum Sepolia)
 
 This project is deployed straight from [Remix IDE](https://remix.ethereum.org)
+using MetaMask, so there's nothing to install locally.
+
 ## 0. Prerequisites
 
 - MetaMask installed, with the **Sepolia** test network enabled. Sepolia
-  ships built into MetaMask by default just turn on "Show test networks"
+  ships built into MetaMask by default; just turn on "Show test networks"
   in Settings > General, or add it manually:
   - Network name: `Sepolia`
   - RPC URL: `https://rpc.sepolia.org`
   - Chain ID: `11155111`
   - Currency symbol: `SepoliaETH`
   - Block explorer: `https://sepolia.etherscan.io`
-- Free `SepoliaETH` from a faucet [Google's Sepolia faucet](https://cloud.google.com/application/web3/faucet/ethereum/sepolia).
+- Free `SepoliaETH` from a faucet, e.g. [Google's Sepolia faucet](https://cloud.google.com/application/web3/faucet/ethereum/sepolia).
 
 ## 1. Load the contract in Remix
 
@@ -42,6 +44,14 @@ This project is deployed straight from [Remix IDE](https://remix.ethereum.org)
 ## 4. Verify on Etherscan (optional but recommended)
 
 1. Go to `https://sepolia.etherscan.io/address/<your_contract_address>`.
+2. Open the **Contract** tab and click **Verify and Publish**.
+3. Choose compiler type *Solidity (Single file)*, the same compiler version
+   you used in Remix (e.g. `v0.8.20`), and license *MIT*.
+4. Paste the flattened source (in Remix: right-click the file > **Flatten**),
+   and provide the ABI-encoded constructor argument (your `initialOwner`).
+   Alternatively, use Remix's **Contract Verification** plugin.
+5. Once verified, anyone can read the source and call `ownerOf` / `tokenURI`
+   directly from Etherscan's **Read Contract** tab.
 
 ## Record here after deploying
 
